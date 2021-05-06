@@ -53,10 +53,18 @@ def rectangle(start, end):
 
     end_fill()
 
-
 def triangle(start, end):
     "Draw triangle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y) #Se mueve el cursor al punto inicial
+    down()
+    begin_fill()
+
+    for count in range(3): #Se van a dibujar los tres lados
+        forward(end.x - start.x) #Cada lado medirá lo mismo
+        left(120) #Se gira 120 grados para que cada par de lados formen 60 grados
+
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
