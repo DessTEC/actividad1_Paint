@@ -33,9 +33,17 @@ def square(start, end):
 
     end_fill()
 
-def circle(start, end):
+def circleDraw(start, end): #Se cambia el nombre de la función
     "Draw circle from start to end."
-    pass  # TODO
+    up()
+    goto(start.x, start.y) #Se mueve el cursor al punto inicial
+    down()
+    begin_fill()
+
+    circle(end.x - start.x) #Se usa la función de la librería turtle, pasando como radio la distancia entre el punto inicial y final en x
+
+    end_fill()
+
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
